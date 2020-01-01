@@ -1,6 +1,8 @@
 package ab1;
 
+import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.Set;
 
 public class TMStateConfig {
 
@@ -53,7 +55,7 @@ public class TMStateConfig {
         this.halt = halt;
     }
 
-    public TMStateConfig(){
+    public TMStateConfig() {
         super();
         this.leftOfHead = new LinkedList<Character>();
         this.belowHead = '#';
@@ -68,7 +70,6 @@ public class TMStateConfig {
     }
 
     public void performMovement(Movement movement) throws IllegalStateException {
-        //Try Ctach drum herum!
         try {
             switch (movement) {
                 case LEFT:
@@ -80,40 +81,68 @@ public class TMStateConfig {
                         this.crashed = false;
                         this.halt = false;
                         this.rightOfHead.add(belowHead);
-                        belowHead = this.leftOfHead.remove(leftOfHead.size() - 1);
+                        if (getLeftOfHead().size() > 0) {
+                            belowHead = this.leftOfHead.remove(leftOfHead.size() - 1);
+                        } else {
+                            belowHead = '#';
+                        }
                     }
                     break;
 
                 case RIGHT:
                     this.leftOfHead.add(belowHead);
-                    belowHead = this.rightOfHead.remove(rightOfHead.size() - 1);
+                    if (getRightOfHead().size() > 0) {
+                        belowHead = this.rightOfHead.remove(rightOfHead.size() - 1);
+                    } else {
+                        belowHead = '#';
+                    }
                     this.crashed = false;
                     this.halt = false;
                     break;
 
                 case STAY:
-                    this.halt = true;
+                    this.halt = false;
                     this.crashed = false;
                     break;
             }
-        }catch (IllegalStateException e){
+        } catch (IllegalStateException e) {
             e.printStackTrace();
         }
     }
 
-    public TMConfig changeConfig(TMStateConfig currentState){
+    public TMConfig changeConfig(TMStateConfig currentState) {
         LinkedList<Character> leftSide = currentState.getLeftOfHead();
         LinkedList<Character> rightSide = currentState.getRightOfHead();
         char[] leftOfHeadNew = new char[leftSide.size()];
         char[] rightOfHeadNew = new char[rightSide.size()];
 
-        for (int i = 0; i<leftOfHeadNew.length; i++) {
+        for (int i = 0; i < leftOfHeadNew.length; i++) {
             leftOfHeadNew[i] = leftSide.get(i);
         }
 
-        for (int i = 0; i<rightOfHeadNew.length; i++) {
+        for (int i = 0; i < rightOfHeadNew.length; i++) {
             rightOfHeadNew[i] = rightSide.get(i);
         }
+
+        Set<Character> duplicates = findDuplicates(rightSide);
+        // wenn rightSide nur # enthält --> neues char-Array
+        if (duplicates.contains('#') && duplicates.size() == 1) {
+            rightOfHeadNew = new char[0];
+        }
+
         return new TMConfig(leftOfHeadNew, currentState.getBelowHead(), rightOfHeadNew);
+    }
+
+    private Set<Character> findDuplicates(LinkedList<Character> listContainingDuplicates) {
+
+        Set<Character> setToReturn = new HashSet<>();
+        Set<Character> set1 = new HashSet<>();
+
+        for (Character actElement : listContainingDuplicates) {
+            if (!set1.add(actElement)) {
+                setToReturn.add(actElement);
+            }
+        }
+        return setToReturn;
     }
 }

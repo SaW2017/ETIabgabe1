@@ -13,7 +13,7 @@ public class Ab1Impl implements Ab1 {
 
     @Override
     public RegEx getRegExImpl() {
-        return null;
+        return new RegExImpl();
     }
 
 }

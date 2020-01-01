@@ -18,7 +18,7 @@ public class TMImpl implements TM {
     private Map<Integer, Map<Character, Integer>> toStates;
     private Map<Integer, Map<Character, Character>> writeSymbols;
     private Map<Integer, Map<Character, Movement>> movements;
-    private Integer state = 0;
+    private Integer state;
 
     @Override
     public void reset() {
@@ -27,8 +27,8 @@ public class TMImpl implements TM {
         this.writeSymbols = new HashMap<>();
         this.movements = new HashMap<>();
         //this.currentState.setHalt(true);
-        // TODO notwendig?
         this.symbols = null;
+        this.states = null;
     }
 
     @Override
@@ -49,7 +49,7 @@ public class TMImpl implements TM {
     public void addTransition(int fromState, char symbolRead, int toState, char symbolWrite, Movement movement) throws IllegalArgumentException {
         // Todo Abprüfen auf fehler muss anders gehen?!
         //todo wann ist man im HALTE-Zustand
-        if (this.currentState.getHalt()) {
+        if (this.currentState.getHalt() || fromState == 0) {
             throw new IllegalArgumentException("Transition not possible!");
 
             //TODO fehlt noch: uneindeutige Transition, Symbol kann nicht verarbeitet werden
@@ -69,11 +69,6 @@ public class TMImpl implements TM {
                     writeSymbols.get(fromState).put(symbolRead, symbolWrite);
                     movements.get(fromState).put(symbolRead, movement);
                 }
-            }
-            if (fromState == 0) {
-                //this.currentState.setHalt(true);
-            } else {
-                //    this.currentState.setHalt(false);
             }
 
             // fill Set with all States
@@ -98,6 +93,9 @@ public class TMImpl implements TM {
 
     @Override
     public Set<Integer> getStates() {
+        if (!this.states.contains(0)) {
+            this.states.add(0);
+        }
         return this.states;
     }
 
@@ -121,42 +119,51 @@ public class TMImpl implements TM {
     public void doNextStep() throws IllegalStateException {
 
         if (toStates.size() == 0) {
+            currentState.setCrashed(true);
             throw new IllegalStateException("There exists no Transition");
         } else {
-            if (currentState.getHalt()) {
+            if (currentState.getHalt() || this.state == 0) {
+                currentState.setCrashed(true);
                 throw new IllegalStateException("Tm is already stopped!");
             } else {
-                int nextState = toStates.get(state).get(currentState.getBelowHead());
-                char writeSymbol = writeSymbols.get(state).get(currentState.getBelowHead());
-                Movement movement = movements.get(state).get(currentState.getBelowHead());
-                try {
-                    currentState.performMovement(movement);
+                if (toStates.get(state).get(currentState.getBelowHead()) == null) {
+                    throw new IllegalStateException("There exists no Transition");
+                } else {
+                    int nextState = toStates.get(state).get(currentState.getBelowHead());
+                    char writeSymbol = writeSymbols.get(state).get(currentState.getBelowHead());
+                    Movement movement = movements.get(state).get(currentState.getBelowHead());
+                    try {
+                        if (writeSymbol != '\0') {
+                            switch (movement) {
+                                case LEFT:
+                                    if (currentState.getRightOfHead().size() > 0) {
+                                        currentState.getRightOfHead().remove(currentState.getRightOfHead().size() - 1);
+                                    }
+                                    currentState.getRightOfHead().add(writeSymbol);
+                                    break;
 
-                    if (writeSymbol != '\0') {
-                        // todo erst schreiben, dann bewegen ?? was machen wir hier?
-                        switch (movement) {
-                            case LEFT:
-                                currentState.getRightOfHead().remove(currentState.getRightOfHead().size() - 1);
-                                currentState.getRightOfHead().add(writeSymbol);
-                                break;
+                                case RIGHT:
+                                    if (currentState.getLeftOfHead().size() > 0) {
+                                        currentState.getLeftOfHead().remove(currentState.getLeftOfHead().size() - 1);
+                                    }
+                                    currentState.getLeftOfHead().add(writeSymbol);
+                                    break;
 
-                            case RIGHT:
-                                currentState.getLeftOfHead().remove(currentState.getLeftOfHead().size() - 1);
-                                currentState.getLeftOfHead().add(writeSymbol);
-                                break;
-
-                            case STAY:
-                                currentState.setBelowHead(writeSymbol);
-                                break;
+                                case STAY:
+                                    currentState.setBelowHead(writeSymbol);
+                                    break;
+                            }
                         }
+                        // perform movement
+                        currentState.performMovement(movement);
+                        this.state = nextState;
+                        if (nextState == 0) {
+                            currentState.setHalt(true);
+                        }
+                    } catch (IllegalStateException e) {
+                        currentState.setCrashed(true);
+                        e.printStackTrace();
                     }
-                    this.state = nextState;
-                    if (nextState == 0) {
-                        currentState.setHalt(true);
-                    }
-                } catch (IllegalStateException e) {
-                    currentState.setCrashed(true);
-                    e.printStackTrace();
                 }
             }
         }
