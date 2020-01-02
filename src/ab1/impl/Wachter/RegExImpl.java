@@ -64,7 +64,13 @@ public class RegExImpl implements RegEx {
 //TODO noch zu machen
     @Override
     public String getRegexURL() {
-        return null;
+        // Beginnt mit http://, https://, ftp://
+        // Buchstabe/Wort mit darauffolgendem Punkt
+        // Top-Level-Domain
+        // Port(doppelpunkt & nur Zahlen)
+        // Schrägstrich mit Pfad
+        // Abschliessender Schrägstrich
+        return "(https?|ftp)://([a-z]+.)+[a-z]{2,3}(:[0-9&&[^a-z]]+)?(/[-.a-z]*)*/*";
     }
 
     @Override
