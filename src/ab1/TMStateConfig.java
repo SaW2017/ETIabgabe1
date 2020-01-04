@@ -69,7 +69,7 @@ public class TMStateConfig {
         this.rightOfHead = rightOfHead;
     }
 
-    public void performMovement(Movement movement) throws IllegalStateException {
+    public void performMovement(Movement movement, Character writeSymbol) throws IllegalStateException {
         try {
             switch (movement) {
                 case LEFT:
@@ -80,6 +80,7 @@ public class TMStateConfig {
                     } else {
                         this.crashed = false;
                         this.halt = false;
+                        belowHead = writeSymbol;
                         this.rightOfHead.add(belowHead);
                         if (getLeftOfHead().size() > 0) {
                             belowHead = this.leftOfHead.remove(leftOfHead.size() - 1);
@@ -90,6 +91,7 @@ public class TMStateConfig {
                     break;
 
                 case RIGHT:
+                    belowHead = writeSymbol;
                     this.leftOfHead.add(belowHead);
                     if (getRightOfHead().size() > 0) {
                         belowHead = this.rightOfHead.remove(rightOfHead.size() - 1);
@@ -101,6 +103,7 @@ public class TMStateConfig {
                     break;
 
                 case STAY:
+                    belowHead = writeSymbol;
                     this.halt = false;
                     this.crashed = false;
                     break;
@@ -111,26 +114,30 @@ public class TMStateConfig {
     }
 
     public TMConfig changeConfig(TMStateConfig currentState) {
-        LinkedList<Character> leftSide = currentState.getLeftOfHead();
-        LinkedList<Character> rightSide = currentState.getRightOfHead();
-        char[] leftOfHeadNew = new char[leftSide.size()];
-        char[] rightOfHeadNew = new char[rightSide.size()];
+        if (currentState.getCrashed()) {
+            return null;
+        } else {
+            LinkedList<Character> leftSide = currentState.getLeftOfHead();
+            LinkedList<Character> rightSide = currentState.getRightOfHead();
+            char[] leftOfHeadNew = new char[leftSide.size()];
+            char[] rightOfHeadNew = new char[rightSide.size()];
 
-        for (int i = 0; i < leftOfHeadNew.length; i++) {
-            leftOfHeadNew[i] = leftSide.get(i);
+            for (int i = 0; i < leftOfHeadNew.length; i++) {
+                leftOfHeadNew[i] = leftSide.get(i);
+            }
+
+            for (int i = 0; i < rightOfHeadNew.length; i++) {
+                rightOfHeadNew[i] = rightSide.get(i);
+            }
+
+            Set<Character> duplicates = findDuplicates(rightSide);
+            // wenn rightSide nur # enthält --> neues char-Array
+            if (duplicates.contains('#') && duplicates.size() == 1) {
+                rightOfHeadNew = new char[0];
+            }
+
+            return new TMConfig(leftOfHeadNew, currentState.getBelowHead(), rightOfHeadNew);
         }
-
-        for (int i = 0; i < rightOfHeadNew.length; i++) {
-            rightOfHeadNew[i] = rightSide.get(i);
-        }
-
-        Set<Character> duplicates = findDuplicates(rightSide);
-        // wenn rightSide nur # enthält --> neues char-Array
-        if (duplicates.contains('#') && duplicates.size() == 1) {
-            rightOfHeadNew = new char[0];
-        }
-
-        return new TMConfig(leftOfHeadNew, currentState.getBelowHead(), rightOfHeadNew);
     }
 
     private Set<Character> findDuplicates(LinkedList<Character> listContainingDuplicates) {

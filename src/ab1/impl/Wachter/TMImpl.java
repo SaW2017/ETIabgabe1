@@ -47,13 +47,16 @@ public class TMImpl implements TM {
 
     @Override
     public void addTransition(int fromState, char symbolRead, int toState, char symbolWrite, Movement movement) throws IllegalArgumentException {
-        // Todo Abprüfen auf fehler muss anders gehen?!
-        //todo wann ist man im HALTE-Zustand
         if (this.currentState.getHalt() || fromState == 0) {
-            throw new IllegalArgumentException("Transition not possible!");
+            throw new IllegalArgumentException("Transition not possible! TM is already in \'Halt\'!");
+        } else if (!symbols.contains(symbolRead) || !symbols.contains(symbolWrite)) {
+            throw new IllegalArgumentException("Symbol isn`t an allowed Symbol!");
+        }
 
-            //TODO fehlt noch: uneindeutige Transition, Symbol kann nicht verarbeitet werden
-        } else {
+        // else if (toState < 0 || fromState < 0) {   Angabe states 0 - ....
+        //    throw new IllegalArgumentException("Transitions can only be positive Numbers!");
+        // }
+        else {
             if (!toStates.containsKey(fromState)) {
                 toStates.put(fromState, new HashMap<>());
                 toStates.get(fromState).put(symbolRead, toState);
@@ -62,12 +65,14 @@ public class TMImpl implements TM {
                 movements.put(fromState, new HashMap<>());
                 movements.get(fromState).put(symbolRead, movement);
             } else {
-                //todo Key existiert aber innere Map erweitern
+                // Key existiert --> innere Map erweitern
                 Map<Character, Integer> innerToStates = toStates.get(fromState);
                 if (!innerToStates.containsKey(symbolRead)) {
                     toStates.get(fromState).put(symbolRead, toState);
                     writeSymbols.get(fromState).put(symbolRead, symbolWrite);
                     movements.get(fromState).put(symbolRead, movement);
+                } else {
+                    throw new IllegalArgumentException("Transition is not distinct!");
                 }
             }
 
@@ -108,7 +113,12 @@ public class TMImpl implements TM {
     public void setInitialTapeContent(char[] content) {
         LinkedList<Character> leftOfHead = new LinkedList<>();
         for (int i = 0; i < content.length; i++) {
-            leftOfHead.add(i, content[i]);
+            // Nichterlaubtes Symbol
+            if (!symbols.contains(content[i])) {
+                currentState.setCrashed(true);
+            } else {
+                leftOfHead.add(i, content[i]);
+            }
         }
         char belowHead = '#';
         LinkedList<Character> rightOfHead = new LinkedList<>();
@@ -117,7 +127,7 @@ public class TMImpl implements TM {
 
     @Override
     public void doNextStep() throws IllegalStateException {
-
+//todo movement = null exceptioN!
         if (toStates.size() == 0) {
             currentState.setCrashed(true);
             throw new IllegalStateException("There exists no Transition");
@@ -127,35 +137,15 @@ public class TMImpl implements TM {
                 throw new IllegalStateException("Tm is already stopped!");
             } else {
                 if (toStates.get(state).get(currentState.getBelowHead()) == null) {
+                    currentState.setCrashed(true);
                     throw new IllegalStateException("There exists no Transition");
                 } else {
                     int nextState = toStates.get(state).get(currentState.getBelowHead());
                     char writeSymbol = writeSymbols.get(state).get(currentState.getBelowHead());
                     Movement movement = movements.get(state).get(currentState.getBelowHead());
                     try {
-                        if (writeSymbol != '\0') {
-                            switch (movement) {
-                                case LEFT:
-                                    if (currentState.getRightOfHead().size() > 0) {
-                                        currentState.getRightOfHead().remove(currentState.getRightOfHead().size() - 1);
-                                    }
-                                    currentState.getRightOfHead().add(writeSymbol);
-                                    break;
-
-                                case RIGHT:
-                                    if (currentState.getLeftOfHead().size() > 0) {
-                                        currentState.getLeftOfHead().remove(currentState.getLeftOfHead().size() - 1);
-                                    }
-                                    currentState.getLeftOfHead().add(writeSymbol);
-                                    break;
-
-                                case STAY:
-                                    currentState.setBelowHead(writeSymbol);
-                                    break;
-                            }
-                        }
-                        // perform movement
-                        currentState.performMovement(movement);
+                        // perform movement & write Symbol
+                        currentState.performMovement(movement, writeSymbol);
                         this.state = nextState;
                         if (nextState == 0) {
                             currentState.setHalt(true);
@@ -167,14 +157,6 @@ public class TMImpl implements TM {
                 }
             }
         }
-        /*
-         * internt aktuellen State festhalten = state
-         * und den updaten mit den Maps
-         * nextState = toStates Get (Akt. Schlüssel fromState, zweite Schlüssel = akt gelesene Zeichen Current State = below Head
-         * --> dann weiss ich welcher der Folgezustand, Movement, Writesymbol ist alles auf dieselbe Weise
-         * movement machen (currentState -> performMovement), setter BelowHead, performMoevemtn mit try-catch
-         * wenn boolean crashed = true
-         * */
     }
 
     @Override
