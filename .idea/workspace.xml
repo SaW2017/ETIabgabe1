@@ -3,18 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0b14b516-f664-4e2d-825b-a14aa176645d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Abgabe/ab1/TMConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Abgabe/ab1/TMConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Abgabe/ab1/TMStateConfig$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Abgabe/ab1/TMStateConfig$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Abgabe/ab1/TMStateConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Abgabe/ab1/TMStateConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Abgabe/ab1/impl/Wachter/RegExImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Abgabe/ab1/impl/Wachter/RegExImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Abgabe/ab1/impl/Wachter/TMImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Abgabe/ab1/impl/Wachter/TMImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Abgabe/ab1/tests/Ab1Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Abgabe/ab1/tests/Ab1Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Abgabe/ab1/tests/utils/TestUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Abgabe/ab1/tests/utils/TestUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ab1/TMConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ab1/TMConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ab1/TMStateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ab1/TMStateConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ab1/impl/Wachter/TMImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ab1/impl/Wachter/TMImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ab1/tests/Ab1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ab1/tests/Ab1Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ab1/tests/utils/TMTestAdvFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ab1/tests/utils/TMTestAdvFunctions.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -198,9 +190,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.Ab1Test" />
+        <item itemvalue="JUnit.Ab1Test.testTMAdvReset" />
         <item itemvalue="JUnit.Ab1Test.testTMAdvFunctions" />
         <item itemvalue="JUnit.Ab1Test.testTMBasicFunctions" />
-        <item itemvalue="JUnit.Ab1Test.testTMAdvReset" />
         <item itemvalue="JUnit.Ab1Test.testTMBasic" />
       </list>
     </recent_temporary>

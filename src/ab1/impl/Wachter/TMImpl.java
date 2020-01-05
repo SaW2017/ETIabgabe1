@@ -28,7 +28,7 @@ public class TMImpl implements TM {
         this.movements = new HashMap<>();
         //this.currentState.setHalt(true);
         this.symbols = null;
-        this.states = null;
+        this.states = new HashSet<Integer>();
     }
 
     @Override
