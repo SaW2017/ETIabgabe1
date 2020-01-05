@@ -299,7 +299,6 @@ public class Ab1Test {
     @Test
     public void testTMAdvFunctions() {
 	TMTestAdvFunctions m = new TMTestAdvFunctions(sol.getTMImpl());
-
 	try {
 	    m.testAmbiguousTransitions();
 	    Assert.fail();
@@ -333,7 +332,7 @@ public class Ab1Test {
 
 	m.testLongTape();
 //todo  ein # zuviel
-	//m.testNegativeAndBigStates();
+	m.testNegativeAndBigStates();
 
 	m.testNoMovement();
 

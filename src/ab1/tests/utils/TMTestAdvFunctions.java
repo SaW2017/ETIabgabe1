@@ -51,7 +51,7 @@ public class TMTestAdvFunctions {
 	machine.doNextStep();
 	TMConfig config = machine.getTMConfig();
 	Assert.assertTrue(new String(config.getLeftOfHead()).equals("#aa") && config.getBelowHead() == '#'
-		&& config.getRightOfHead().length == 0);
+				&& config.getRightOfHead().length == 0);
     }
 
     public void testNegativeAndBigStates() {

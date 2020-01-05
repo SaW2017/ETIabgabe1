@@ -127,11 +127,12 @@ public class TMImpl implements TM {
 
     @Override
     public void doNextStep() throws IllegalStateException {
-//todo movement = null exceptioN!
+//todo if no transition setHALT, not setCrashed
+
         if (toStates.size() == 0) {
             currentState.setCrashed(true);
             throw new IllegalStateException("There exists no Transition");
-        } else {
+        }else {
             if (currentState.getHalt() || this.state == 0) {
                 currentState.setCrashed(true);
                 throw new IllegalStateException("Tm is already stopped!");
@@ -144,12 +145,18 @@ public class TMImpl implements TM {
                     char writeSymbol = writeSymbols.get(state).get(currentState.getBelowHead());
                     Movement movement = movements.get(state).get(currentState.getBelowHead());
                     try {
+                        //if movement == null head stays at same place
                         // perform movement & write Symbol
-                        currentState.performMovement(movement, writeSymbol);
+                        if (movement!=null){
+                            currentState.performMovement(movement, writeSymbol);
+                        }
                         this.state = nextState;
                         if (nextState == 0) {
                             currentState.setHalt(true);
                         }
+                    } catch (NullPointerException e) {
+                        currentState.setCrashed(true);
+
                     } catch (IllegalStateException e) {
                         currentState.setCrashed(true);
                         e.printStackTrace();
@@ -171,6 +178,7 @@ public class TMImpl implements TM {
 
     @Override
     public TMConfig getTMConfig() {
+
         return currentState.changeConfig(currentState);
     }
 }

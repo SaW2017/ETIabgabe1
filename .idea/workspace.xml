@@ -3,14 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="0b14b516-f664-4e2d-825b-a14aa176645d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Abgabe/ab1/TMConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Abgabe/ab1/TMConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Abgabe/ab1/TMStateConfig$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Abgabe/ab1/TMStateConfig$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Abgabe/ab1/TMStateConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Abgabe/ab1/TMStateConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Abgabe/ab1/impl/Wachter/TMImpl$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Abgabe/ab1/impl/Wachter/RegExImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Abgabe/ab1/impl/Wachter/RegExImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Abgabe/ab1/impl/Wachter/TMImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Abgabe/ab1/impl/Wachter/TMImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Abgabe/ab1/tests/Ab1Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Abgabe/ab1/tests/Ab1Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Abgabe/ab1/tests/utils/TestUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Abgabe/ab1/tests/utils/TestUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ab1/TMConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ab1/TMConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ab1/TMStateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ab1/TMStateConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ab1/impl/Wachter/TMImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ab1/impl/Wachter/TMImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ab1/tests/Ab1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ab1/tests/Ab1Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ab1/tests/utils/TMTestAdvFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ab1/tests/utils/TMTestAdvFunctions.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,180 +31,6 @@
     <option name="hideWarnings" value="true" />
     <option name="HIDE_WARNINGS" value="true" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-675611902">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="5" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.10" value="2" />
-          <entry key="project.open.time.11" value="2" />
-          <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.14" value="1" />
-          <entry key="project.open.time.16" value="1" />
-          <entry key="project.open.time.17" value="1" />
-          <entry key="project.open.time.21" value="1" />
-          <entry key="project.open.time.23" value="1" />
-          <entry key="project.opened" value="11" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="class" value="14" />
-          <entry key="java" value="30" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CLASS" value="14" />
-          <entry key="JAVA" value="30" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="dummy" value="5" />
-          <entry key="java" value="6398" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="6398" />
-          <entry key="PLAIN_TEXT" value="5" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.72740114">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ab1/tests/Ab1Test.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="72">
-                  <caret line="337" column="16" lean-forward="true" selection-start-line="337" selection-start-column="16" selection-end-line="337" selection-end-column="16" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ab1/tests/utils/TMTestAdvFunctions.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="157">
-                  <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/ab1/impl/Wachter/TMImpl.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="89">
-                  <caret line="129" column="33" selection-start-line="129" selection-start-column="33" selection-end-line="129" selection-end-column="33" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="method#setSymbols#0;class#TMImpl#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ab1/Ab1.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ab1/TMStateConfig.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="208">
-                  <caret line="74" column="26" lean-forward="true" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ab1/impl/Wachter/RegExImpl.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1105">
-                  <caret line="66" column="20" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ab1/Movement.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="51">
-                  <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ab1/TM.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="157">
-                  <caret line="88" column="16" selection-start-line="88" selection-start-column="16" selection-end-line="88" selection-end-column="16" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/ab1/TM.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="663">
-                  <caret line="63" column="4" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="4" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ab1/tests/utils/TMTestBasicMachine.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="765">
-                  <caret line="54" selection-start-line="54" selection-end-line="54" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ab1/tests/utils/TMTestBasicFunctions.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="544">
-                  <caret line="41" column="92" selection-start-line="41" selection-start-column="73" selection-end-line="41" selection-end-column="92" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ab1/TMConfig.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-                  <folding>
-                    <element signature="e#547#548#0" expanded="true" />
-                    <element signature="e#580#581#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -207,103 +38,21 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>halt</find>
-      <find>0</find>
-      <find>states</find>
-    </findStrings>
-    <replaceStrings>
-      <replace />
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/ab1/TMConfig.java" />
-        <option value="$PROJECT_DIR$/src/ab1/TMNewConfig.java" />
-        <option value="$PROJECT_DIR$/src/ab1/impl/NACHNAMEN/Ab1Impl.java" />
-        <option value="$PROJECT_DIR$/src/ab1/impl/NACHNAMEN/Test.java" />
-        <option value="$PROJECT_DIR$/src/ab1/impl/NACHNAMEN/TMImpl.java" />
-        <option value="$PROJECT_DIR$/src/ab1/impl/NACHNAMEN/RegExImpl.java" />
-        <option value="$PROJECT_DIR$/src/ab1/RegEx.java" />
-        <option value="$PROJECT_DIR$/src/ab1/impl/Wachter/RegExImpl.java" />
-        <option value="$PROJECT_DIR$/src/ab1/impl/Wachter/Ab1Impl.java" />
-        <option value="$PROJECT_DIR$/src/ab1/tests/Ab1Test.java" />
-        <option value="$PROJECT_DIR$/src/ab1/TMStateConfig.java" />
-        <option value="$PROJECT_DIR$/src/ab1/impl/Wachter/TMImpl.java" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1908" />
-    <option name="y" value="90" />
-    <option name="width" value="1944" />
-    <option name="height" value="2088" />
-  </component>
+  <component name="ProjectId" id="1VyYLjxYsyQCYMEv0vgyWfgrLLx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Abgabe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Abgabe" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Abgabe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Abgabe" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Abgabe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Abgabe" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ab1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Abgabe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Abgabe" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ab1" type="462c0819:PsiDirectoryNode" />
-              <item name="Wachter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Abgabe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Abgabe" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ab1" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Abgabe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Abgabe" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ab1" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1578141922360" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -317,8 +66,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Ab1Test.testTMAdvFunctions">
-    <configuration default="true" type="Applet" factoryName="Applet">
+  <component name="RunManager" selected="JUnit.Ab1Test">
+    <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -340,6 +89,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ab1.tests" />
       <option name="MAIN_CLASS_NAME" value="ab1.tests.Ab1Test" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -414,12 +164,14 @@
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <properties />
       <listeners />
@@ -427,11 +179,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
+      <predefined_log_file enabled="true" id="idea.log" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -445,8 +197,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Ab1Test.testTMAdvFunctions" />
         <item itemvalue="JUnit.Ab1Test" />
+        <item itemvalue="JUnit.Ab1Test.testTMAdvFunctions" />
         <item itemvalue="JUnit.Ab1Test.testTMBasicFunctions" />
         <item itemvalue="JUnit.Ab1Test.testTMAdvReset" />
         <item itemvalue="JUnit.Ab1Test.testTMBasic" />
@@ -466,100 +218,16 @@
     </task>
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="Ab1Test_testTMAdvFunctions - 2020.01.04 at 13h 12m 26s.xml">
-      <configuration name="Ab1Test.testTMAdvFunctions" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Ab1Test_testTMAdvFunctions - 2020.01.04 at 13h 15m 59s.xml">
-      <configuration name="Ab1Test.testTMAdvFunctions" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Ab1Test_testTMAdvFunctions - 2020.01.04 at 13h 28m 31s.xml">
-      <configuration name="Ab1Test.testTMAdvFunctions" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Ab1Test_testTMAdvFunctions - 2020.01.04 at 13h 28m 48s.xml">
-      <configuration name="Ab1Test.testTMAdvFunctions" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Ab1Test_testTMAdvFunctions - 2020.01.04 at 13h 29m 47s.xml">
-      <configuration name="Ab1Test.testTMAdvFunctions" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Ab1Test_testTMAdvFunctions - 2020.01.04 at 13h 33m 53s.xml">
-      <configuration name="Ab1Test.testTMAdvFunctions" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Ab1Test_testTMAdvFunctions - 2020.01.04 at 13h 33m 58s.xml">
-      <configuration name="Ab1Test.testTMAdvFunctions" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Ab1Test_testTMAdvFunctions - 2020.01.04 at 13h 38m 55s.xml">
-      <configuration name="Ab1Test.testTMAdvFunctions" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Ab1Test_testTMAdvFunctions - 2020.01.04 at 13h 41m 23s.xml">
-      <configuration name="Ab1Test.testTMAdvFunctions" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Ab1Test_testTMAdvFunctions - 2020.01.04 at 13h 45m 11s.xml">
-      <configuration name="Ab1Test.testTMAdvFunctions" configurationId="JUnit" />
-    </history-entry>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-6" y="34" width="1719" height="932" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14852676" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.40149626" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.35037407" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32876712" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12387252" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32876712" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.28518057" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32876712" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
-    </layout-to-restore>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -567,50 +235,47 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ab1/impl/Wachter/Test.java</url>
           <line>31</line>
-          <properties />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ab1/impl/Wachter/Test.java</url>
           <line>29</line>
-          <properties />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ab1/tests/Ab1Test.java</url>
           <line>270</line>
-          <properties />
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ab1/tests/Ab1Test.java</url>
-          <line>337</line>
-          <properties />
+          <line>336</line>
           <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ab1/tests/Ab1Test.java</url>
-          <line>335</line>
-          <properties />
+          <line>334</line>
           <option name="timeStamp" value="56" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ab1/tests/utils/TMTestAdvFunctions.java</url>
           <line>69</line>
-          <properties />
           <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ab1/tests/utils/TMTestAdvFunctions.java</url>
           <line>70</line>
-          <properties />
           <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ab1/tests/Ab1Test.java</url>
-          <line>339</line>
-          <properties />
+          <line>338</line>
           <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ab1/tests/utils/TMTestAdvFunctions.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="62" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -684,164 +349,5 @@ this.states.add(actualFromState);</expression-string>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/Integer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="51" column="19" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ab1/impl/Wachter/Test.java" />
-    <entry file="file://$PROJECT_DIR$/src/ab1/RegEx.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="61" column="20" lean-forward="true" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ab1/impl/Wachter/Ab1Impl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ab1/impl/Wachter/RegExImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="66" column="20" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ab1/Movement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ab1/tests/utils/TMTestBasicMachine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ab1/tests/utils/TMTestBasicFunctions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="41" column="92" selection-start-line="41" selection-start-column="73" selection-end-line="41" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/Assert.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="290" selection-start-line="290" selection-end-line="290" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="202" selection-start-line="202" selection-end-line="202" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ab1/Ab1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ab1/TMConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-          <folding>
-            <element signature="e#547#548#0" expanded="true" />
-            <element signature="e#580#581#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ab1/TM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="88" column="16" selection-start-line="88" selection-start-column="16" selection-end-line="88" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ab1/tests/Ab1Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="337" column="16" lean-forward="true" selection-start-line="337" selection-start-column="16" selection-end-line="337" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ab1/tests/utils/TMTestAdvFunctions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ab1/TMStateConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="74" column="26" lean-forward="true" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ab1/impl/Wachter/TMImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="129" column="33" selection-start-line="129" selection-start-column="33" selection-end-line="129" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setSymbols#0;class#TMImpl#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>

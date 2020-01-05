@@ -127,19 +127,38 @@ public class TMStateConfig {
             }
 
             for (int i = 0; i < rightOfHeadNew.length; i++) {
-                rightOfHeadNew[i] = rightSide.get(i);
+                rightOfHeadNew[rightOfHeadNew.length-1-i] = rightSide.get(i);
             }
-
+            rightOfHeadNew=endsWithHash(rightOfHeadNew);
             Set<Character> duplicates = findDuplicates(rightSide);
             // wenn rightSide nur # enthält --> neues char-Array
             if (duplicates.contains('#') && duplicates.size() == 1) {
                 rightOfHeadNew = new char[0];
             }
-
+            String str="#aa";
+            char[] charArray=str.toCharArray();
+            System.out.println(new String(charArray).equals("#aa"));
+            for (int i=0;i<charArray.length;i++){
+                System.out.print(charArray[i]);
+            }
+            System.out.println("test");
             return new TMConfig(leftOfHeadNew, currentState.getBelowHead(), rightOfHeadNew);
         }
     }
+    private char[] endsWithHash(char[] array) {
+        char[] arrayWithOutHash;
+        if(array.length>0 && array[array.length-1]=='#'){
+            System.out.println("endswith #");
+            arrayWithOutHash=new char[array.length-1];
+            for(int i=0;i<arrayWithOutHash.length;i++){
+                arrayWithOutHash[i]=array[i];
+            }
+        }else{
+            arrayWithOutHash=array;
+        }
 
+        return arrayWithOutHash;
+    }
     private Set<Character> findDuplicates(LinkedList<Character> listContainingDuplicates) {
 
         Set<Character> setToReturn = new HashSet<>();

@@ -20,7 +20,12 @@ public class TMConfig {
     private char[] rightOfHead;
 
     public char[] getLeftOfHead() {
-        return leftOfHead;
+        /*String test="";
+        for(int i=0;i<leftOfHead.length;i++){
+            test+=leftOfHead[i];
+        }
+        leftOfHead=test.toCharArray();
+        */return leftOfHead;
     }
 
     public char getBelowHead() {
