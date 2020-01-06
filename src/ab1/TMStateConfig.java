@@ -9,10 +9,9 @@ public class TMStateConfig {
     Boolean crashed = false;
     Boolean halt = false;
 
-    // TODO nicht vergessen am Ende in alte Config umzuwandeln
     private LinkedList<Character> leftOfHead;
     private char belowHead;
-    // TODO verkehrt herum geordnet
+    // verkehrt herum geordnet
     private LinkedList<Character> rightOfHead;
 
     public LinkedList<Character> getLeftOfHead() {
@@ -73,11 +72,13 @@ public class TMStateConfig {
         try {
             switch (movement) {
                 case LEFT:
+                    // Kopf bereits ganz links
                     if (leftOfHead.size() == 0) {
                         this.crashed = true;
                         this.halt = false;
                         throw new IllegalStateException("You can't go over left border!");
                     } else {
+                        // 1. write Symbol 2. Movement
                         this.crashed = false;
                         this.halt = false;
                         belowHead = writeSymbol;
@@ -117,6 +118,7 @@ public class TMStateConfig {
         if (currentState.getCrashed()) {
             return null;
         } else {
+            // Listen in Arrays zurück umwandeln
             LinkedList<Character> leftSide = currentState.getLeftOfHead();
             LinkedList<Character> rightSide = currentState.getRightOfHead();
             char[] leftOfHeadNew = new char[leftSide.size()];
@@ -158,6 +160,7 @@ public class TMStateConfig {
         Set<Character> setToReturn = new HashSet<>();
         Set<Character> set1 = new HashSet<>();
 
+        // prüfen ob rechte Liste nur # enthält
         for (Character actElement : listContainingDuplicates) {
             if (!set1.add(actElement)) {
                 setToReturn.add(actElement);
