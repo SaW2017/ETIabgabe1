@@ -1,4 +1,4 @@
-package ab1.impl.Wachter;
+package ab1.impl.FreislichWachter;
 
 import ab1.Movement;
 import ab1.TM;

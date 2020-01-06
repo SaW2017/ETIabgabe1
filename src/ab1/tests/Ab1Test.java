@@ -7,7 +7,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import ab1.Ab1;
-import ab1.impl.Wachter.Ab1Impl;
+import ab1.impl.FreislichWachter.Ab1Impl;
 import ab1.tests.utils.TMTestAdvComplex;
 import ab1.tests.utils.TMTestAdvExp;
 import ab1.tests.utils.TMTestAdvFunctions;
