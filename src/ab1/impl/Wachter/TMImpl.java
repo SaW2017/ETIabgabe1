@@ -47,16 +47,18 @@ public class TMImpl implements TM {
 
     @Override
     public void addTransition(int fromState, char symbolRead, int toState, char symbolWrite, Movement movement) throws IllegalArgumentException {
+        // nicht erlaubt: Transition aus einem Haltezustand in einen anderen
         if (this.currentState.getHalt() || fromState == 0) {
             throw new IllegalArgumentException("Transition not possible! TM is already in \'Halt\'!");
+            // Symbole sind nicht Teil des Sets
         } else if (!symbols.contains(symbolRead) || !symbols.contains(symbolWrite)) {
             throw new IllegalArgumentException("Symbol isn`t an allowed Symbol!");
         }
-
-        // else if (toState < 0 || fromState < 0) {   Angabe states 0 - ....
+        // else if (toState < 0 || fromState < 0) {   Angabe states 0 - ....???
         //    throw new IllegalArgumentException("Transitions can only be positive Numbers!");
         // }
         else {
+            // falls key noch nicht vorhanden -> neue Maps
             if (!toStates.containsKey(fromState)) {
                 toStates.put(fromState, new HashMap<>());
                 toStates.get(fromState).put(symbolRead, toState);
@@ -89,6 +91,7 @@ public class TMImpl implements TM {
                         }
                     }
                 } else {
+                    // neue Liste mit States anlegen
                     this.states = new HashSet<Integer>();
                     this.states.add(actualFromState);
                 }
@@ -98,6 +101,7 @@ public class TMImpl implements TM {
 
     @Override
     public Set<Integer> getStates() {
+        // 0 = Haltezustand immer Teil der States
         if (!this.states.contains(0)) {
             this.states.add(0);
         }
@@ -127,16 +131,17 @@ public class TMImpl implements TM {
 
     @Override
     public void doNextStep() throws IllegalStateException {
-//todo if no transition setHALT, not setCrashed
-
+        // bisher keine States angelegt
         if (toStates.size() == 0) {
             currentState.setCrashed(true);
             throw new IllegalStateException("There exists no Transition");
         }else {
+            // bereits im Haltezustand
             if (currentState.getHalt() || this.state == 0) {
                 currentState.setCrashed(true);
                 throw new IllegalStateException("Tm is already stopped!");
             } else {
+                // es existiert keine Transition
                 if (toStates.get(state).get(currentState.getBelowHead()) == null) {
                     currentState.setCrashed(true);
                     throw new IllegalStateException("There exists no Transition");

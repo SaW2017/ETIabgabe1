@@ -331,7 +331,7 @@ public class Ab1Test {
 	}
 
 	m.testLongTape();
-//todo  ein # zuviel
+
 	m.testNegativeAndBigStates();
 
 	m.testNoMovement();
